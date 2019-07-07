@@ -3,7 +3,7 @@
 <suite name="Capsule CRM Tests">
     <test name="Case Creating Tests">
         <classes>
-            <class name="tests.CreatingCasesPageTest"/>
+            <class name="tests.CreatingCasesTest"/>
         </classes>
     </test>
 </suite>
