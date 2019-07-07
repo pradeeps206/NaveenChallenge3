@@ -23,7 +23,7 @@ public class PeopleAndOrganisationPage {
     private WebElement lastName;
 
     @FindBy(xpath = ".//select[@name='party:j_id108:j_id116']")
-    private Select salutations;
+    private WebElement salutations;
 
     @FindBy(xpath = ".//input[contains(@id,'jobTitle')]")
     private WebElement jobTitle;
@@ -43,7 +43,7 @@ public class PeopleAndOrganisationPage {
     @FindBy(xpath=".//input[contains(@id,'save')]")
     private WebElement saveButton;
 
-    public static PeopleAndOrganisationPage getPeopleAndOrganisation() {
+    public static PeopleAndOrganisationPage getPeopleAndOrganisationPage() {
         return peopleAndOrganisation;
     }
 
@@ -53,7 +53,7 @@ public class PeopleAndOrganisationPage {
 
     public void addPerson(String selectedOption, String firstName, String lastName, String jobTitle,String organisation, String tagName, String contactNumber) {
         newPersonLink.click();
-        this.salutations.selectByVisibleText(selectedOption);
+        salutations.sendKeys(selectedOption);
         this.firstName.sendKeys(firstName);
         this.lastName.sendKeys(lastName);
         this.jobTitle.sendKeys(jobTitle);

@@ -15,6 +15,9 @@ public class DashboardPage {
     @FindBy(xpath = ".//a[@aria-label='People & Organisations']")
     private WebElement peopleAndOrganisationLink;
 
+    @FindBy(xpath=".//a[@aria-label='Cases']")
+    private WebElement casesLink;
+
     private DashboardPage() {
         PageFactory.initElements(DriverProvider.driver, this);
     }
@@ -26,5 +29,10 @@ public class DashboardPage {
     public void clickPeopleAndOrganisation() {
         peopleAndOrganisationLink.click();
         logger.info("opening ppl and org");
+    }
+
+    public void clickCases(){
+        casesLink.click();
+        logger.info("opening cases");
     }
 }
