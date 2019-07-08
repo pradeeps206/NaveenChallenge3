@@ -1,6 +1,5 @@
 package tests;
 
-import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 import pages.CasesPage;
@@ -17,7 +16,7 @@ public class CreatingCasesTest {
     private CasesPage casesPage;
 
     @BeforeSuite
-    public void launchAppBeforeTest(){
+    public void launchAppBeforeTest() {
         DriverProvider.getInstance();
         loginPage = LoginPage.getLoginPage();
         dashboardPage = DashboardPage.getDashboardPage();
@@ -27,12 +26,12 @@ public class CreatingCasesTest {
     }
 
     @Test
-    public void addingCase(){
+    public void addingCase() {
         loginPage.enterUserName();
         loginPage.enterPassword();
         loginPage.clickLoginButton();
         dashboardPage.clickPeopleAndOrganisation();
-        peopleAndOrganisation.addPerson("Mr", "Pradeep","Srinivasan","Engineer", "FictionalCo","Member","+19999999999");
+        peopleAndOrganisation.addPerson("Mr", "Pradeep", "Srinivasan", "Engineer", "FictionalCo", "Member", "+19999999999");
         dashboardPage.clickCases();
         casesPage.startAddingCase("Pradeep Srinivasan", "CaseCreationForTest", "CaseDescription", "CaseTag");
     }
