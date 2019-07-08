@@ -39,8 +39,6 @@ public class DriverProvider {
         chromeOptions = new ChromeOptions();
 //        chromeOptions.addArguments("headless");
         chromeOptions.addArguments("--incognito");
-        DesiredCapabilities capabilities = DesiredCapabilities.chrome();
-        capabilities.setCapability(ChromeOptions.CAPABILITY, chromeOptions);
         logger.info("setting up incognito and headless mode");
     }
 

@@ -1,5 +1,6 @@
 package tests;
 
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 import pages.CasesPage;
@@ -10,10 +11,10 @@ import testprovisions.DriverProvider;
 
 public class CreatingCasesTest {
 
-    LoginPage loginPage;
-    DashboardPage dashboardPage;
-    PeopleAndOrganisationPage peopleAndOrganisation;
-    CasesPage casesPage;
+    private LoginPage loginPage;
+    private DashboardPage dashboardPage;
+    private PeopleAndOrganisationPage peopleAndOrganisation;
+    private CasesPage casesPage;
 
     @BeforeSuite
     public void launchAppBeforeTest(){
